@@ -9,7 +9,8 @@ const cookieparser = require("cookieparser");
 const PORT =8000;
 
 mongoose.connect('mongodb://localhost:27017/blogify')
-.then(()=>console.log("mongoDB connected"))
+.then(()=>console.log("mongoDB is connected successfully"))
+.catch(()=>{console.log("error")})
 
 
 //apply middleware first then route
