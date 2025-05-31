@@ -35,10 +35,15 @@ router.post("/signin",async(req,res)=>{
         
     } catch (error) {
         return res.render('signin',{
-            error:"incorrect email or password"
+            error:"Incorrect email or password"
         })
         
     }
+})
+
+router.get("/logout",(req,res)=>{
+    res.clearCookie("token");
+    res.redirect("/");
 })
 
 

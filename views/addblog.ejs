@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <%- include('./partials/head') %><!-- this is implement the same code which is in the location of this path -->
+
+    
+    <title>Add New Blog</title>
+ </head>
+ <body>
+    <%- include('./partials/nav') %>
+
+
+    <div class="container mt-3">
+  <form action="">
+    <div class="mb-3">
+      <label for="coverimage" class="form-label">Cover Image</label>
+      <input class="form-control" type="file" id="coverimage" name="coverimage">
+    </div>
+  </form>
+</div>
+
+
+    <div class="container mt-3" >
+        <form action="">
+
+            <div class="mb-3">
+                  <label for="Title" class="form-label">Title</label>
+                  <input type="text" class="title" id="title"name="title" aria-describedby="title">
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-3" >
+        <form action="">
+
+            <div class="mb-3">
+                <label for="body">Body</label>
+                  <textarea name="body" class="form-control" placeholder="Leave a comment here" id="body"></textarea>
+                  
+
+            </div>
+        </form>
+    </div>
+
+
+     <div class="container mt-3" >
+        <form action="">
+
+           <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    
+    <%- include('./partials/script') %>
+    
+    
+ </body>
+ </html>

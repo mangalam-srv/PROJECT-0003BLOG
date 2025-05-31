@@ -4,9 +4,9 @@ const {validatetoken}= require("../services/auth");
 
 function checkforauthcookie(cookiename){
     return(req,res,next)=>{
-        const tokencookievalue = req.cookie[cookiename];
+        const tokencookievalue = req.cookies[cookiename];
         if(!tokencookievalue){
-            next();
+            return next();
         }
 
         try{
