@@ -1,5 +1,22 @@
 const JWT = require("jsonwebtoken");
 
+
+
+
+// JWT is mainly used for authentication — that is, to verify who the user is without having to check the database every time.
+
+// Instead of logging in on every request, here's what happens:
+
+// ✅ A user logs in once (e.g. enters email and password).
+
+// ✅ If the login is successful, your server creates a JWT and sends it back to the client.
+
+// ✅ The client (like a browser) stores the token (in localStorage, cookie, etc.).
+
+// ✅ On future requests, the client sends this token along (usually in a header).
+
+// ✅ The server verifies the token to identify the user — without needing a password or DB query again.
+
 const secret = "$uperman@123";//this will be used in jwt.io
 
 function createtokenforuser(user){

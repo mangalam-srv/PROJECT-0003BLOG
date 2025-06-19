@@ -1,59 +1,38 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <%- include('./partials/head') %><!-- this is implement the same code which is in the location of this path -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head') %>
+  <title>Add New Blog</title>
+</head>
+<body>
+  <%- include('./partials/nav') %>
 
-    
-    <title>Add New Blog</title>
- </head>
- <body>
-    <%- include('./partials/nav') %>
+  <div class="container mt-5">
+    <form action="/blog" method="POST" enctype="multipart/form-data">
+      
+      <!-- Cover Image -->
+      <div class="mb-3">
+        <label for="coverimage" class="form-label">Cover Image</label>
+        <input class="form-control" type="file" id="coverimage" name="coverimage">
+      </div>
 
+      <!-- Title -->
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title">
+      </div>
 
-    <div class="container mt-3">
-  <form action="">
-    <div class="mb-3">
-      <label for="coverimage" class="form-label">Cover Image</label>
-      <input class="form-control" type="file" id="coverimage" name="coverimage">
-    </div>
-  </form>
-</div>
+      <!-- Body -->
+      <div class="mb-3">
+        <label for="body" class="form-label">Body</label>
+        <textarea name="body" class="form-control" placeholder="Leave a comment here" id="body" rows="5"></textarea>
+      </div>
 
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 
-    <div class="container mt-3" >
-        <form action="">
-
-            <div class="mb-3">
-                  <label for="Title" class="form-label">Title</label>
-                  <input type="text" class="title" id="title"name="title" aria-describedby="title">
-            </div>
-        </form>
-    </div>
-
-    <div class="container mt-3" >
-        <form action="">
-
-            <div class="mb-3">
-                <label for="body">Body</label>
-                  <textarea name="body" class="form-control" placeholder="Leave a comment here" id="body"></textarea>
-                  
-
-            </div>
-        </form>
-    </div>
-
-
-     <div class="container mt-3" >
-        <form action="">
-
-           <button class="btn btn-primary">Submit</button>
-        </form>
-    </div>
-
-
-    
-    <%- include('./partials/script') %>
-    
-    
- </body>
- </html>
+  <%- include('./partials/script') %>
+</body>
+</html>

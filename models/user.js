@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const {Schema,model} = mongoose;
 const {
   createHmac,randomBytes
-} = require('node:crypto');//this is required here for hashing and salting 
+                       } = require('node:crypto');//this is required here for hashing and salting 
 const { createtokenforuser } = require('../services/auth');
 
 const userSchema = new Schema({
@@ -26,11 +26,12 @@ const userSchema = new Schema({
      },
      profileimage:{
         type:String,
-        default:'./images/OIP.jpg',
+        default: '/uploads/OIP.jpg',
+
      },
      role:{
         type:String,
-        enum:["USER","ADMIN"],
+        enum:["USER","ADMIN"],//this is used as if we will use some other value instead of this then mongoose will throw error 
         default:"USER",
      },
 },{

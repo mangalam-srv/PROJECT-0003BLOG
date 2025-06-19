@@ -15,7 +15,7 @@ const blogschema = new Schema({
         required:false,
     },
     createdBy:{
-        type:Schema.Types.ObjectId,
+        type:Schema.Types.ObjectId,//built in funtion
         ref:"user",
 
     },
@@ -23,7 +23,4 @@ const blogschema = new Schema({
         timestamps:true
     });
 
-    const blog = model("blog",blogschema);
-    module.exports = {
-        blog,
-    }
+    module.exports = model("Blog", blogschema);
