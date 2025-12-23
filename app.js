@@ -16,7 +16,7 @@
 
     mongoose.connect(process.env.MONGO_URL)
     .then(()=>console.log("mongoDB is connected successfully"))
-    .catch(()=>{console.log("error")})
+    .catch((err)=>{console.log("MongoDB connection error:", err.message)})
 
 
     //apply middleware first then route

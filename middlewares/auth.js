@@ -12,6 +12,8 @@ function checkforauthcookie(cookiename){
         try{
             const userpayload = validatetoken(tokencookievalue);
             req.user = userpayload;
+            // expose user to templates as locals.user
+            res.locals.user = userpayload;
 
         }catch(error){}
         next();

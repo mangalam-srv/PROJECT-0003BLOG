@@ -23,6 +23,7 @@ function createtokenforuser(user){
     const payload = {// payload is the data you want to include inside the JWT.It contains information that might be useful on the client-side or during verification of the token on future requests.
         _id:user._id,
         email: user.email,
+        fullname: user.fullname,
         profileimage : user.profileimage,
         role:user.role,
 

@@ -15,7 +15,7 @@
 
     <div class="container" >
 
-        <form action="/user/signup" method="post">
+        <form action="/user/signup" method="post" enctype="multipart/form-data">
 
           <div class="mb-3">
     <label for="fullname" class="form-label">Full name</label>
@@ -46,6 +46,11 @@
     name="password"
     class="form-control"
      id="exampleInputPassword1">
+  </div>
+
+  <div class="mb-3">
+    <label for="profileimage" class="form-label">Profile image (optional)</label>
+    <input type="file" name="profileimage" class="form-control" id="profileimage" accept="image/*">
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
