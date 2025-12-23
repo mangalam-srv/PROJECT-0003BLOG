@@ -6,13 +6,14 @@
     const blogroute=require("./routes/blog");
     const mongoose  = require("mongoose");
     const cookieparser = require("cookie-parser");
+    const PORT = process.env.PORT || 3000;
 
     const Blog= require("./models/blog")
 
     const { checkforauthcookie } = require("./middlewares/auth");
 
 
-    const PORT =process.env.PORT || 8000;
+    // const PORT =process.env.PORT || 8000;
 
     mongoose.connect(process.env.MONGO_URL)
     .then(()=>console.log("mongoDB is connected successfully"))
@@ -49,6 +50,6 @@
     })
 
 
-    app.listen(PORT,()=>{
-        console.log(`server started on Port ${PORT}`);
-    })
+  app.listen(PORT, () => {
+  console.log("server started on Port " + PORT);
+});

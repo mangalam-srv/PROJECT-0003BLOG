@@ -5,6 +5,29 @@
   <title>Homepage</title>
 
   <style>
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-bottom: 60px;
+    border-radius: 10px;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    opacity: 0.9;
+  }
+
   .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -43,6 +66,11 @@
 </head>
 <body>
   <%- include('./partials/nav') %>
+
+  <div class="hero">
+    <h1>BLOGIFY</h1>
+    <p>Share your stories, inspire the world</p>
+  </div>
 
   <div class="container mt-3">
   <div class="card-container">
